@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTA VI India Release Countdown — PreetPresets (@hesitationisdefeatt)</title>
+
+  <!-- Fonts: Pricedown (CDN) + Montserrat (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet" />
+
+  <script>
+    // Defined in <head> so onerror handlers fire safely even if an image fails before <body> finishes parsing
+    window.__renderFallbackPending = false;
+
+    window.renderIllustratedFallback = function () {
+      const canvas = document.getElementById('bg-fallback-canvas');
+      if (!canvas) {
+        window.__renderFallbackPending = true;
+        return;
+      }
+      window.__renderFallbackPending = false;
+      canvas.style.display = 'block';
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      const W = 1920;
+      const H = 1080;
+
+      // 1. Deep Twilight-to-Vice-City Sunset Sky Gradient
+      const sky = ctx.createLinearGradient(0, 0, 0, H * 0.72);
+      sky.addColorStop(0.0, '#0c051c');
+      sky.addColorStop(0.28, '#28114b');
+      sky.addColorStop(0.54, '#6d1d75');
+      sky.addColorStop(0.74, '#d9387a');
+      sky.addColorStop(0.90, '#ff7b47');
+      sky.addColorStop(1.0, '#ffbe55');
+      ctx.fillStyle = sky;
+      ctx.fillRect(0, 0, W, H * 0.72);
+
+      // Warm Horizon Sun Glow behind Lucia & Jason
+      const sunGlow = ctx.createRadialGradient(460, 560, 20, 460, 560, 580);
+      sunGlow.addColorStop(0, 'rgba(255, 224, 130, 0.85)');
+      sunGlow.addColorStop(0.38, 'rgba(255, 92, 138, 0.45)');
+      sunGlow.addColorStop(1, 'rgba(18, 6, 31, 0)');
+      ctx.fillStyle = sunGlow;
+      ctx.fillRect(0, 0, W, H);
+
+      // 2. Atmospheric Sunset Clouds
+      function drawCloud(cx, cy, rx, ry, color) {
+        const g = ctx.createRadialGradient(cx, cy, rx * 0.1, cx, cy, rx);
+        g.addColorStop(0, color);
+        g.addColorStop(1, 'rgba(20, 8, 36, 0)');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      drawCloud(360, 490, 420, 95, 'rgba(255, 165, 95, 0.42)');
+      drawCloud(780, 460, 380, 110, 'rgba(130, 40, 110, 0.45)');
+      drawCloud(1280, 340, 460, 150, 'rgba(16, 8, 28, 0.78)');
+      drawCloud(1620, 420, 400, 130, 'rgba(12, 6, 22, 0.82)');
+
+      // 3. GTA VI Style Sky Portraits (Lucia & Jason integrated into the sunset clouds)
+      ctx.save();
+      const jasonX = 745;
+      const jasonY = 230;
+      const jasonBody = ctx.createLinearGradient(0, jasonY + 120, 0, jasonY + 340);
+      jasonBody.addColorStop(0, '#3a2238');
+      jasonBody.addColorStop(0.55, '#59334d');
+      jasonBody.addColorStop(1, 'rgba(255, 110, 120, 0)');
+      ctx.fillStyle = jasonBody;
+      ctx.beginPath();
+      ctx.moveTo(jasonX - 135, jasonY + 330);
+      ctx.quadraticCurveTo(jasonX - 115, jasonY + 185, jasonX - 42, jasonY + 165);
+      ctx.lineTo(jasonX + 42, jasonY + 165);
+      ctx.quadraticCurveTo(jasonX + 125, jasonY + 190, jasonX + 145, jasonY + 330);
+      ctx.closePath();
+      ctx.fill();
+
+      const tankGrad = ctx.createLinearGradient(0, jasonY + 170, 0, jasonY + 320);
+      tankGrad.addColorStop(0, 'rgba(225, 210, 225, 0.78)');
+      tankGrad.addColorStop(1, 'rgba(225, 210, 225, 0)');
+      ctx.fillStyle = tankGrad;
+      ctx.beginPath();
+      ctx.moveTo(jasonX - 88, jasonY + 310);
+      ctx.lineTo(jasonX - 58, jasonY + 178);
+      ctx.quadraticCurveTo(jasonX, jasonY + 235, jasonX + 58, jasonY + 178);
+      ctx.lineTo(jasonX + 95, jasonY + 310);
+      ctx.closePath();
+      ctx.fill();
+
+      const jasonHead = ctx.createLinearGradient(jasonX - 65, jasonY, jasonX + 65, jasonY + 165);
+      jasonHead.addColorStop(0, '#b87668');
+      jasonHead.addColorStop(0.55, '#6b3d46');
+      jasonHead.addColorStop(1, '#2a1529');
+      ctx.fillStyle = jasonHead;
+      ctx.beginPath();
+      ctx.ellipse(jasonX, jasonY + 82, 58, 76, 0.04, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = '#1b0d1e';
+      ctx.beginPath();
+      ctx.ellipse(jasonX + 2, jasonY + 42, 56, 38, 0.04, Math.PI, Math.PI * 2);
+      ctx.fill();
+
+      const luciaX = 565;
+      const luciaY = 265;
+      const luciaBody = ctx.createLinearGradient(0, luciaY + 130, 0, luciaY + 340);
+      luciaBody.addColorStop(0, '#4c2647');
+      luciaBody.addColorStop(0.5, '#7a3b5c');
+      luciaBody.addColorStop(1, 'rgba(255, 130, 115, 0)');
+      ctx.fillStyle = luciaBody;
+      ctx.beginPath();
+      ctx.moveTo(luciaX - 165, luciaY + 320);
+      ctx.quadraticCurveTo(luciaX - 135, luciaY + 185, luciaX - 38, luciaY + 165);
+      ctx.lineTo(luciaX + 38, luciaY + 165);
+      ctx.quadraticCurveTo(luciaX + 125, luciaY + 190, luciaX + 145, luciaY + 320);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.fillStyle = '#170a1c';
+      ctx.beginPath();
+      ctx.ellipse(luciaX - 6, luciaY + 86, 66, 86, -0.05, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(luciaX - 45, luciaY + 30);
+      ctx.quadraticCurveTo(luciaX - 95, luciaY + 95, luciaX - 75, luciaY + 185);
+      ctx.quadraticCurveTo(luciaX - 45, luciaY + 145, luciaX - 38, luciaY + 80);
+      ctx.fill();
+
+      const luciaFace = ctx.createLinearGradient(luciaX - 55, luciaY + 15, luciaX + 55, luciaY + 155);
+      luciaFace.addColorStop(0, '#e39a7b');
+      luciaFace.addColorStop(0.5, '#9e5858');
+      luciaFace.addColorStop(1, '#3b1c33');
+      ctx.fillStyle = luciaFace;
+      ctx.beginPath();
+      ctx.ellipse(luciaX, luciaY + 85, 52, 70, -0.04, 0, Math.PI * 2);
+      ctx.fill();
+
+      const mistBlend = ctx.createLinearGradient(0, 465, 0, 595);
+      mistBlend.addColorStop(0, 'rgba(255, 130, 120, 0)');
+      mistBlend.addColorStop(0.65, 'rgba(255, 125, 105, 0.72)');
+      mistBlend.addColorStop(1, 'rgba(235, 95, 110, 0.92)');
+      ctx.fillStyle = mistBlend;
+      ctx.fillRect(350, 465, 560, 135);
+      ctx.restore();
+
+      // 4. Ocean & Bay Curve
+      const ocean = ctx.createLinearGradient(0, 580, 0, H);
+      ocean.addColorStop(0, '#2b1342');
+      ocean.addColorStop(0.35, '#160b29');
+      ocean.addColorStop(1, '#080312');
+      ctx.fillStyle = ocean;
+      ctx.fillRect(0, 580, W, H - 580);
+
+      const waterRefl = ctx.createRadialGradient(420, 620, 10, 420, 650, 420);
+      waterRefl.addColorStop(0, 'rgba(255, 180, 100, 0.45)');
+      waterRefl.addColorStop(0.5, 'rgba(255, 71, 126, 0.22)');
+      waterRefl.addColorStop(1, 'rgba(18, 6, 31, 0)');
+      ctx.fillStyle = waterRefl;
+      ctx.fillRect(0, 580, 1100, 350);
+
+      // 5. Vice City Skyline & Neon Waterfront
+      const buildings = [
+        { x: 20, y: 495, w: 95, h: 165, neon: '#ff477e' },
+        { x: 130, y: 465, w: 120, h: 195, neon: '#ff9a44' },
+        { x: 270, y: 520, w: 85, h: 140, neon: '#00f5d4' },
+        { x: 375, y: 505, w: 110, h: 155, neon: '#ff477e' },
+        { x: 505, y: 540, w: 80, h: 120, neon: '#ffbe55' },
+        { x: 600, y: 558, w: 70, h: 102, neon: '#00f5d4' }
+      ];
+      buildings.forEach((b) => {
+        ctx.fillStyle = '#0c051a';
+        ctx.fillRect(b.x, b.y, b.w, b.h);
+        ctx.fillStyle = b.neon;
+        ctx.shadowColor = b.neon;
+        ctx.shadowBlur = 16;
+        ctx.fillRect(b.x + 10, b.y + 10, b.w - 20, 6);
+        ctx.shadowBlur = 0;
+      });
+
+      for (let i = 0; i < 18; i++) {
+        const lx = 80 + i * 44;
+        const ly = 665 + Math.sin(i * 0.25) * 45 + i * 8;
+        ctx.fillStyle = 'rgba(255, 190, 110, 0.85)';
+        ctx.beginPath();
+        ctx.arc(lx, ly, 3.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // 6. Japanese Pagoda Rooftops & Sekiro Samurai Silhouette
+      ctx.fillStyle = '#07020f';
+      ctx.beginPath();
+      ctx.moveTo(0, 880);
+      ctx.quadraticCurveTo(240, 835, 430, 745);
+      ctx.quadraticCurveTo(580, 845, 790, 910);
+      ctx.lineTo(790, H);
+      ctx.lineTo(0, H);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(820, 920);
+      ctx.quadraticCurveTo(1180, 815, 1450, 700);
+      ctx.quadraticCurveTo(1690, 595, W, 455);
+      ctx.lineTo(W, H);
+      ctx.lineTo(820, H);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.fillStyle = '#05010a';
+      ctx.beginPath();
+      ctx.moveTo(1432, 715);
+      ctx.lineTo(1438, 615);
+      ctx.lineTo(1414, 535);
+      ctx.lineTo(1412, 470);
+      ctx.quadraticCurveTo(1416, 435, 1446, 428);
+      ctx.arc(1472, 396, 26, Math.PI * 0.85, Math.PI * 2.15);
+      ctx.quadraticCurveTo(1528, 438, 1528, 480);
+      ctx.lineTo(1615, 468);
+      ctx.lineTo(1578, 526);
+      ctx.lineTo(1524, 536);
+      ctx.lineTo(1520, 615);
+      ctx.lineTo(1536, 715);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.strokeStyle = '#05010a';
+      ctx.lineWidth = 7;
+      ctx.beginPath();
+      ctx.moveTo(1352, 515);
+      ctx.lineTo(1612, 608);
+      ctx.stroke();
+
+      ctx.strokeStyle = 'rgba(255, 220, 235, 0.75)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(1525, 577);
+      ctx.lineTo(1610, 607);
+      ctx.stroke();
+
+      // 7. Glowing Ember Particles
+      const embers = [
+        [290, 220, 3], [880, 175, 2.5], [1120, 295, 3.5], [1295, 210, 2.5],
+        [1635, 265, 3], [1755, 395, 2.5], [1215, 505, 2.5], [1390, 330, 3],
+        [1540, 210, 2], [980, 410, 2.5], [1680, 520, 3]
+      ];
+      embers.forEach(([ex, ey, er]) => {
+        ctx.fillStyle = '#ff5e1a';
+        ctx.shadowColor = '#ff5e1a';
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.arc(ex, ey, er, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      ctx.shadowBlur = 0;
+    };
+
+    window.handleBgError = function (imgEl) {
+      if (!imgEl.dataset.triedFallback) {
+        imgEl.dataset.triedFallback = 'true';
+        imgEl.src = 'background.png';
+      } else {
+        imgEl.style.display = 'none';
+        window.renderIllustratedFallback();
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg-twilight: #12061f;
+      --neon-pink: #ff477e;
+      --neon-pink-soft: #ff85b3;
+      --sunset-orange: #ff9a44;
+      --vignette: rgba(10, 4, 18, 0.45);
+      --glass-bg: rgba(18, 6, 31, 0.58);
+      --glass-border: rgba(255, 133, 179, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #07020d;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Native 1920x1080 OBS Canvas — scales down smoothly ONLY when previewed in smaller browser panes */
+    .canvas {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      min-width: 1920px;
+      min-height: 1080px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 48px 60px;
+      transform-origin: center center;
+      background: linear-gradient(180deg, #0d041a 0%, #240b36 38%, #7b1fa2 68%, #ff477e 86%, #ff9a44 100%);
+    }
+
+    /* Layer 1: Dedicated full-bleed background image (1794842495515.jpeg -> background.png) */
+    .bg-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Layer 2: High-detail illustrated fallback canvas when local files aren't mounted in sandbox preview */
+    .bg-fallback-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      display: none;
+    }
+
+    /* Layer 3: Subtle dark radial vignette between background image and foreground UI */
+    .bg-vignette {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: radial-gradient(
+        circle at center,
+        rgba(10, 4, 18, 0.14) 0%,
+        rgba(10, 4, 18, 0.34) 62%,
+        rgba(8, 2, 14, 0.72) 100%
+      );
+    }
+
+    /* ================= 1. TOP ROW ================= */
+    .top-row {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      background: var(--glass-bg);
+      border: 1.5px solid var(--glass-border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #ffffff;
+      box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(255, 71, 126, 0.25);
+    }
+
+    .pill-badge .sub-handle {
+      color: var(--neon-pink-soft);
+      font-weight: 700;
+    }
+
+    .live-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--neon-pink);
+      box-shadow: 0 0 12px var(--neon-pink), 0 0 24px var(--neon-pink);
+      animation: pulseDot 1.6s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 10px var(--neon-pink), 0 0 22px var(--neon-pink);
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 0.72;
+        box-shadow: 0 0 18px var(--neon-pink-soft), 0 0 34px var(--neon-pink);
+      }
+    }
+
+    /* ================= 2. CENTER ZONE ================= */
+    .center-zone {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .motto-header {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--neon-pink-soft);
+      text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.92),
+        0 0 18px rgba(255, 71, 126, 0.65);
+    }
+
+    .gta-title-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 0.92;
+    }
+
+    .gta-title {
+      font-family: 'Pricedown Bl', 'Pricedown', Impact, sans-serif;
+      font-size: 112px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      -webkit-text-stroke: 4px #12061f;
+      paint-order: stroke fill;
+      text-shadow:
+        0 6px 0 #12061f,
+        0 12px 30px rgba(0, 0, 0, 0.85),
+        0 0 38px rgba(255, 71, 126, 0.55);
+    }
+
+    .gta-roman {
+      display: inline-block;
+      margin-left: 14px;
+      background: linear-gradient(180deg, #ff9a44 0%, #ff477e 55%, #b5179e 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-stroke: 4px #12061f;
+      paint-order: stroke fill;
+      filter: drop-shadow(0 6px 18px rgba(255, 71, 126, 0.6));
+    }
+
+    /* Timer Row */
+    .timer-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 6px;
+    }
+
+    .time-card {
+      width: 240px;
+      padding: 26px 20px 22px;
+      border-radius: 24px;
+      background: linear-gradient(160deg, rgba(28, 10, 48, 0.72) 0%, rgba(18, 6, 31, 0.62) 100%);
+      border: 2px solid rgba(255, 133, 179, 0.42);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        0 0 28px rgba(255, 71, 126, 0.22);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .time-value {
+      font-family: 'Pricedown Bl', 'Pricedown', Impact, sans-serif;
+      font-size: 118px;
+      line-height: 0.95;
+      color: #ffffff;
+      -webkit-text-stroke: 4px #12061f;
+      paint-order: stroke fill;
+      text-shadow:
+        0 5px 0 #12061f,
+        0 10px 24px rgba(0, 0, 0, 0.85),
+        0 0 26px rgba(255, 154, 68, 0.45);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .time-label {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--sunset-orange);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+    }
+
+    .time-colon {
+      font-family: 'Pricedown Bl', 'Pricedown', Impact, sans-serif;
+      font-size: 96px;
+      line-height: 1;
+      color: var(--neon-pink-soft);
+      -webkit-text-stroke: 3px #12061f;
+      paint-order: stroke fill;
+      text-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.85),
+        0 0 22px rgba(255, 71, 126, 0.75);
+      padding-bottom: 24px;
+    }
+
+    /* Subtitle Pill */
+    .release-pill {
+      margin-top: 6px;
+      padding: 14px 36px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255, 71, 126, 0.26) 0%, rgba(255, 154, 68, 0.26) 100%);
+      border: 1.5px solid rgba(255, 154, 68, 0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    /* ================= 3. BOTTOM ROW ================= */
+    .bottom-row {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .channel-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+      padding: 15px 38px;
+      border-radius: 999px;
+      background: rgba(14, 5, 24, 0.76);
+      border: 1.5px solid var(--glass-border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      white-space: nowrap;
+      box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.55),
+        0 0 24px rgba(255, 71, 126, 0.22);
+    }
+
+    .social-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .channel-bar .yt-name {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+    }
+
+    .channel-bar .divider {
+      color: var(--neon-pink);
+      font-weight: 900;
+    }
+
+    .channel-bar .cta {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--sunset-orange);
+      text-shadow: 0 0 14px rgba(255, 154, 68, 0.5);
+    }
+
+    .channel-bar .url {
+      text-transform: lowercase;
+      letter-spacing: 0.05em;
+      color: var(--neon-pink-soft);
+    }
+
+    .channel-bar .insta-handle {
+      text-transform: lowercase;
+      letter-spacing: 0.06em;
+      color: #ffffff;
+    }
+
+    .channel-bar .insta-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sunset-orange);
+    }
+
+    /* Preview-only helper button (automatically hidden in OBS Studio) */
+    .preview-bg-picker {
+      position: fixed;
+      bottom: 14px;
+      right: 14px;
+      z-index: 9999;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(18, 6, 31, 0.88);
+      border: 1px solid rgba(255, 133, 179, 0.5);
+      color: #ff85b3;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+      transition: all 0.2s ease;
+    }
+
+    .preview-bg-picker:hover {
+      background: rgba(255, 71, 126, 0.25);
+      color: #ffffff;
+      border-color: #ff9a44;
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" id="obs-canvas">
+    <!-- Dedicated HTML <img> layer: loads 1794842495515.jpeg first, then background.png, then rich illustrated artwork -->
+    <img
+      id="bg-img"
+      class="bg-image"
+      src="1794842495515.jpeg"
+      alt="GTA VI Vice City Sunset and Sekiro Samurai Background"
+      onerror="handleBgError(this)"
+    />
+
+    <!-- Rich Procedural Vice City Sunset + Lucia & Jason Sky Portrait + Sekiro Rooftop Fallback for Sandboxed Previews -->
+    <canvas id="bg-fallback-canvas" class="bg-fallback-canvas" width="1920" height="1080"></canvas>
+
+    <!-- Radial Vignette Layer -->
+    <div class="bg-vignette"></div>
+
+    <!-- Zone 1: Top Row -->
+    <header class="top-row">
+      <div class="pill-badge">
+        <span class="live-dot"></span>
+        <span>PREETPRESETS <span class="sub-handle">· @HESITATIONISDEFEATT</span> · LIVE</span>
+      </div>
+      <div class="pill-badge">
+        <span>PS5 / XBOX · INDIA (IST)</span>
+      </div>
+    </header>
+
+    <!-- Zone 2: Center Countdown Zone -->
+    <section class="center-zone" aria-label="GTA 6 India Release Countdown">
+      <div class="motto-header">HESITATION IS DEFEAT</div>
+
+      <div class="gta-title-wrapper">
+        <h1 class="gta-title">grand theft auto <span class="gta-roman">VI</span></h1>
+      </div>
+
+      <div class="timer-row" role="timer" aria-live="off">
+        <div class="time-card">
+          <div class="time-value" id="days">00</div>
+          <div class="time-label">DAYS</div>
+        </div>
+
+        <div class="time-colon">:</div>
+
+        <div class="time-card">
+          <div class="time-value" id="hours">00</div>
+          <div class="time-label">HOURS</div>
+        </div>
+
+        <div class="time-colon">:</div>
+
+        <div class="time-card">
+          <div class="time-value" id="minutes">00</div>
+          <div class="time-label">MINUTES</div>
+        </div>
+
+        <div class="time-colon">:</div>
+
+        <div class="time-card">
+          <div class="time-value" id="seconds">00</div>
+          <div class="time-label">SECONDS</div>
+        </div>
+      </div>
+
+      <div class="release-pill" id="release-status">
+        NOV 19, 2026 · 12:00 AM IST · INDIA RELEASE
+      </div>
+    </section>
+
+    <!-- Zone 3: Bottom Row -->
+    <footer class="bottom-row">
+      <div class="channel-bar">
+        <span class="social-item">
+          <!-- YouTube Icon -->
+          <svg class="social-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2" y="4.5" width="20" height="15" rx="4.2" fill="#ff477e" />
+            <path d="M10 8.8L15.6 12L10 15.2V8.8Z" fill="#ffffff" />
+          </svg>
+          <span class="yt-name">PreetPresets</span>
+        </span>
+
+        <span class="divider">|</span>
+
+        <span class="url">youtube.com/@hesitationisdefeatt</span>
+
+        <span class="divider">|</span>
+
+        <span class="social-item">
+          <!-- Instagram Icon -->
+          <svg class="social-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#ff9a44" stroke-width="2.2" />
+            <circle cx="12" cy="12" r="4.3" stroke="#ff85b3" stroke-width="2.2" />
+            <circle cx="17.6" cy="6.4" r="1.3" fill="#ff9a44" />
+          </svg>
+          <span class="insta-handle">@preet.presets</span>
+        </span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Preview-only local file loader (automatically hidden inside OBS Browser Source) -->
+  <label class="preview-bg-picker" id="preview-bg-picker" title="Load your local 1794842495515.jpeg image in preview">
+    <span>🖼️ Load Local BG</span>
+    <input type="file" id="bg-file-input" accept="image/*" style="display: none;" />
+  </label>
+
+  <script>
+    if (window.__renderFallbackPending) {
+      window.renderIllustratedFallback();
+    }
+
+    (function () {
+      // Fixed ISO-8601 target timestamp in IST (+05:30), independent of system timezone
+      const TARGET_TIMESTAMP_MS = Date.parse('2026-11-19T00:00:00+05:30');
+
+      const canvasEl = document.getElementById('obs-canvas');
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      const statusEl = document.getElementById('release-status');
+      const pickerEl = document.getElementById('preview-bg-picker');
+      const fileInputEl = document.getElementById('bg-file-input');
+      const bgImgEl = document.getElementById('bg-img');
+      const fallbackCanvasEl = document.getElementById('bg-fallback-canvas');
+
+      function padTwoDigits(num) {
+        return String(num).padStart(2, '0');
+      }
+
+      // Keeps native 1:1 1920x1080 resolution inside OBS (and hides preview helper) while scaling cleanly in smaller preview panes
+      function fitViewport() {
+        try {
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
+          const isObsNative =
+            Boolean(window.obsstudio) ||
+            /OBS/i.test(navigator.userAgent) ||
+            (vw === 1920 && vh === 1080);
+
+          if (isObsNative) {
+            canvasEl.style.transform = 'none';
+            if (pickerEl) pickerEl.style.display = 'none';
+          } else {
+            const scale = Math.min(vw / 1920, vh / 1080);
+            canvasEl.style.transform = `scale(${scale})`;
+            if (pickerEl) pickerEl.style.display = 'inline-flex';
+          }
+        } catch (err) {
+          console.error('Viewport scaling error:', err);
+        }
+      }
+
+      // Allow testing local image file inside sandboxed preview
+      if (fileInputEl) {
+        fileInputEl.addEventListener('change', function (e) {
+          const file = e.target.files && e.target.files[0];
+          if (!file) return;
+          const objectUrl = URL.createObjectURL(file);
+          bgImgEl.style.display = 'block';
+          bgImgEl.src = objectUrl;
+          if (fallbackCanvasEl) fallbackCanvasEl.style.display = 'none';
+        });
+      }
+
+      function updateCountdown() {
+        try {
+          const nowMs = Date.now();
+          const diffMs = TARGET_TIMESTAMP_MS - nowMs;
+
+          if (diffMs <= 0) {
+            daysEl.textContent = '00';
+            hoursEl.textContent = '00';
+            minutesEl.textContent = '00';
+            secondsEl.textContent = '00';
+            statusEl.textContent = 'OUT NOW IN INDIA · LIVE ON PS5 / XBOX';
+            return;
+          }
+
+          const totalSeconds = Math.floor(diffMs / 1000);
+          const days = Math.floor(totalSeconds / 86400);
+          const hours = Math.floor((totalSeconds % 86400) / 3600);
+          const minutes = Math.floor((totalSeconds % 3600) / 60);
+          const seconds = totalSeconds % 60;
+
+          daysEl.textContent = padTwoDigits(days);
+          hoursEl.textContent = padTwoDigits(hours);
+          minutesEl.textContent = padTwoDigits(minutes);
+          secondsEl.textContent = padTwoDigits(seconds);
+        } catch (err) {
+          console.error('Countdown calculation error:', err);
+        }
+      }
+
+      window.addEventListener('resize', fitViewport);
+      fitViewport();
+      updateCountdown();
+      setInterval(updateCountdown, 250);
+    })();
+  </script>
+</body>
+</html>
