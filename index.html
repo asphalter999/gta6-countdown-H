@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GTA VI India Release Countdown — PreetPresets (@hesitationisdefeatt)</title>
+  <title>GTA VI India Release Countdown (4K UHD) — PreetPresets (@hesitationisdefeatt)</title>
 
   <!-- Fonts: Pricedown (CDN) + Montserrat (Google Fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,6 +28,10 @@
 
       const W = 1920;
       const H = 1080;
+
+      // Scale vector coordinates 2x to render crisp native 4K (3840x2160)
+      ctx.save();
+      ctx.scale(2, 2);
 
       // 1. Deep Twilight-to-Vice-City Sunset Sky Gradient
       const sky = ctx.createLinearGradient(0, 0, 0, H * 0.72);
@@ -258,6 +262,7 @@
         ctx.fill();
       });
       ctx.shadowBlur = 0;
+      ctx.restore();
     };
 
     window.handleBgError = function (imgEl) {
@@ -302,18 +307,18 @@
       justify-content: center;
     }
 
-    /* Native 1920x1080 OBS Canvas — scales down smoothly ONLY when previewed in smaller browser panes */
+    /* Native 4K UHD (3840x2160) OBS Canvas — scales down smoothly ONLY when previewed in smaller browser panes */
     .canvas {
       position: relative;
-      width: 1920px;
-      height: 1080px;
-      min-width: 1920px;
-      min-height: 1080px;
+      width: 3840px;
+      height: 2160px;
+      min-width: 3840px;
+      min-height: 2160px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 48px 60px;
+      padding: 96px 120px;
       transform-origin: center center;
       background: linear-gradient(180deg, #0d041a 0%, #240b36 38%, #7b1fa2 68%, #ff477e 86%, #ff9a44 100%);
     }
@@ -369,21 +374,21 @@
     .pill-badge {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
-      padding: 14px 28px;
+      gap: 28px;
+      padding: 28px 56px;
       border-radius: 999px;
       background: var(--glass-bg);
-      border: 1.5px solid var(--glass-border);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      font-size: 18px;
+      border: 3px solid var(--glass-border);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      font-size: 36px;
       font-weight: 800;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #ffffff;
       box-shadow:
-        0 8px 28px rgba(0, 0, 0, 0.45),
-        0 0 20px rgba(255, 71, 126, 0.25);
+        0 16px 56px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(255, 71, 126, 0.25);
     }
 
     .pill-badge .sub-handle {
@@ -392,11 +397,11 @@
     }
 
     .live-dot {
-      width: 14px;
-      height: 14px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       background: var(--neon-pink);
-      box-shadow: 0 0 12px var(--neon-pink), 0 0 24px var(--neon-pink);
+      box-shadow: 0 0 24px var(--neon-pink), 0 0 48px var(--neon-pink);
       animation: pulseDot 1.6s infinite ease-in-out;
     }
 
@@ -404,12 +409,12 @@
       0%, 100% {
         transform: scale(1);
         opacity: 1;
-        box-shadow: 0 0 10px var(--neon-pink), 0 0 22px var(--neon-pink);
+        box-shadow: 0 0 20px var(--neon-pink), 0 0 44px var(--neon-pink);
       }
       50% {
         transform: scale(1.3);
         opacity: 0.72;
-        box-shadow: 0 0 18px var(--neon-pink-soft), 0 0 34px var(--neon-pink);
+        box-shadow: 0 0 36px var(--neon-pink-soft), 0 0 68px var(--neon-pink);
       }
     }
 
@@ -421,19 +426,19 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 40px;
       text-align: center;
     }
 
     .motto-header {
-      font-size: 20px;
+      font-size: 40px;
       font-weight: 800;
       letter-spacing: 0.42em;
       text-transform: uppercase;
       color: var(--neon-pink-soft);
       text-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.92),
-        0 0 18px rgba(255, 71, 126, 0.65);
+        0 4px 20px rgba(0, 0, 0, 0.92),
+        0 0 36px rgba(255, 71, 126, 0.65);
     }
 
     .gta-title-wrapper {
@@ -445,28 +450,28 @@
 
     .gta-title {
       font-family: 'Pricedown Bl', 'Pricedown', Impact, sans-serif;
-      font-size: 112px;
+      font-size: 224px;
       font-weight: 900;
       letter-spacing: 0.02em;
       color: #ffffff;
-      -webkit-text-stroke: 4px #12061f;
+      -webkit-text-stroke: 8px #12061f;
       paint-order: stroke fill;
       text-shadow:
-        0 6px 0 #12061f,
-        0 12px 30px rgba(0, 0, 0, 0.85),
-        0 0 38px rgba(255, 71, 126, 0.55);
+        0 12px 0 #12061f,
+        0 24px 60px rgba(0, 0, 0, 0.85),
+        0 0 76px rgba(255, 71, 126, 0.55);
     }
 
     .gta-roman {
       display: inline-block;
-      margin-left: 14px;
+      margin-left: 28px;
       background: linear-gradient(180deg, #ff9a44 0%, #ff477e 55%, #b5179e 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      -webkit-text-stroke: 4px #12061f;
+      -webkit-text-stroke: 8px #12061f;
       paint-order: stroke fill;
-      filter: drop-shadow(0 6px 18px rgba(255, 71, 126, 0.6));
+      filter: drop-shadow(0 12px 36px rgba(255, 71, 126, 0.6));
     }
 
     /* Timer Row */
@@ -475,81 +480,81 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 24px;
-      margin-top: 6px;
+      gap: 48px;
+      margin-top: 12px;
     }
 
     .time-card {
-      width: 240px;
-      padding: 26px 20px 22px;
-      border-radius: 24px;
+      width: 480px;
+      padding: 52px 40px 44px;
+      border-radius: 48px;
       background: linear-gradient(160deg, rgba(28, 10, 48, 0.72) 0%, rgba(18, 6, 31, 0.62) 100%);
-      border: 2px solid rgba(255, 133, 179, 0.42);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      border: 4px solid rgba(255, 133, 179, 0.42);
+      backdrop-filter: blur(32px);
+      -webkit-backdrop-filter: blur(32px);
       box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18),
-        0 0 28px rgba(255, 71, 126, 0.22);
+        0 36px 80px rgba(0, 0, 0, 0.6),
+        inset 0 2px 0 rgba(255, 255, 255, 0.18),
+        0 0 56px rgba(255, 71, 126, 0.22);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 16px;
     }
 
     .time-value {
       font-family: 'Pricedown Bl', 'Pricedown', Impact, sans-serif;
-      font-size: 118px;
+      font-size: 236px;
       line-height: 0.95;
       color: #ffffff;
-      -webkit-text-stroke: 4px #12061f;
+      -webkit-text-stroke: 8px #12061f;
       paint-order: stroke fill;
       text-shadow:
-        0 5px 0 #12061f,
-        0 10px 24px rgba(0, 0, 0, 0.85),
-        0 0 26px rgba(255, 154, 68, 0.45);
+        0 10px 0 #12061f,
+        0 20px 48px rgba(0, 0, 0, 0.85),
+        0 0 52px rgba(255, 154, 68, 0.45);
       font-variant-numeric: tabular-nums;
     }
 
     .time-label {
-      font-size: 17px;
+      font-size: 34px;
       font-weight: 800;
       letter-spacing: 0.26em;
       text-transform: uppercase;
       color: var(--sunset-orange);
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.85);
     }
 
     .time-colon {
       font-family: 'Pricedown Bl', 'Pricedown', Impact, sans-serif;
-      font-size: 96px;
+      font-size: 192px;
       line-height: 1;
       color: var(--neon-pink-soft);
-      -webkit-text-stroke: 3px #12061f;
+      -webkit-text-stroke: 6px #12061f;
       paint-order: stroke fill;
       text-shadow:
-        0 4px 16px rgba(0, 0, 0, 0.85),
-        0 0 22px rgba(255, 71, 126, 0.75);
-      padding-bottom: 24px;
+        0 8px 32px rgba(0, 0, 0, 0.85),
+        0 0 44px rgba(255, 71, 126, 0.75);
+      padding-bottom: 48px;
     }
 
     /* Subtitle Pill */
     .release-pill {
-      margin-top: 6px;
-      padding: 14px 36px;
+      margin-top: 12px;
+      padding: 28px 72px;
       border-radius: 999px;
       background: linear-gradient(90deg, rgba(255, 71, 126, 0.26) 0%, rgba(255, 154, 68, 0.26) 100%);
-      border: 1.5px solid rgba(255, 154, 68, 0.55);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      font-size: 20px;
+      border: 3px solid rgba(255, 154, 68, 0.55);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      font-size: 40px;
       font-weight: 800;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #ffffff;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
     }
 
     /* ================= 3. BOTTOM ROW ================= */
@@ -566,32 +571,32 @@
     .channel-bar {
       display: inline-flex;
       align-items: center;
-      gap: 20px;
-      padding: 15px 38px;
+      gap: 40px;
+      padding: 30px 76px;
       border-radius: 999px;
       background: rgba(14, 5, 24, 0.76);
-      border: 1.5px solid var(--glass-border);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      font-size: 18px;
+      border: 3px solid var(--glass-border);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      font-size: 36px;
       font-weight: 800;
       letter-spacing: 0.1em;
       color: #ffffff;
       white-space: nowrap;
       box-shadow:
-        0 12px 32px rgba(0, 0, 0, 0.55),
-        0 0 24px rgba(255, 71, 126, 0.22);
+        0 24px 64px rgba(0, 0, 0, 0.55),
+        0 0 48px rgba(255, 71, 126, 0.22);
     }
 
     .social-item {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
     }
 
     .social-icon {
-      width: 22px;
-      height: 22px;
+      width: 44px;
+      height: 44px;
       flex-shrink: 0;
     }
 
@@ -674,7 +679,7 @@
     />
 
     <!-- Rich Procedural Vice City Sunset + Lucia & Jason Sky Portrait + Sekiro Rooftop Fallback for Sandboxed Previews -->
-    <canvas id="bg-fallback-canvas" class="bg-fallback-canvas" width="1920" height="1080"></canvas>
+    <canvas id="bg-fallback-canvas" class="bg-fallback-canvas" width="3840" height="2160"></canvas>
 
     <!-- Radial Vignette Layer -->
     <div class="bg-vignette"></div>
@@ -792,7 +797,7 @@
         return String(num).padStart(2, '0');
       }
 
-      // Keeps native 1:1 1920x1080 resolution inside OBS (and hides preview helper) while scaling cleanly in smaller preview panes
+      // Keeps native 1:1 3840x2160 (4K UHD) resolution inside OBS while scaling cleanly in smaller preview panes
       function fitViewport() {
         try {
           const vw = window.innerWidth;
@@ -800,13 +805,13 @@
           const isObsNative =
             Boolean(window.obsstudio) ||
             /OBS/i.test(navigator.userAgent) ||
-            (vw === 1920 && vh === 1080);
+            (vw === 3840 && vh === 2160);
 
           if (isObsNative) {
             canvasEl.style.transform = 'none';
             if (pickerEl) pickerEl.style.display = 'none';
           } else {
-            const scale = Math.min(vw / 1920, vh / 1080);
+            const scale = Math.min(vw / 3840, vh / 2160);
             canvasEl.style.transform = `scale(${scale})`;
             if (pickerEl) pickerEl.style.display = 'inline-flex';
           }
